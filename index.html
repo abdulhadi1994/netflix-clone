@@ -21,25 +21,26 @@
     <section id="home" class="home">
       <div class="home__background-wrapper">
         <div class="container">
-          <!-- <img src="assets/background-img.jpg" alt="" class="container__img"> -->
+          <img src="assets/background-img.jpg" alt="" class="container__img">
           <div class="home-text">
             <h1 class="home-text__heading">
-                Unlimited films, TV programmes and more</h1>
-                <h3 class="home-text__subheading">
-                    Ready to watch? Search for a movie.
-                  </h3>
-        <div class="home__background-search">
-            <div class="home__input--wrapper">
-              <input
-                type="text"
-                class="home__input"
-                id="searchBar"
-                placeholder="Find a movie"
-              />
-              <i class="fa-solid fa-magnifying-glass movie__search"></i>
+              Unlimited films, TV programmes and more
+            </h1>
+            <h3 class="home-text__subheading">
+              Ready to watch? Search for a movie.
+            </h3>
+            <div class="home__background-search">
+              <div class="home__input--wrapper">
+                <input
+                  type="text"
+                  class="home__input"
+                  id="searchBar"
+                  placeholder="Find a movie"
+                />
+                <i class="fa-solid fa-magnifying-glass movie__search" onclick="searchBarClick()" ></i>
+              </div>
             </div>
           </div>
-        </div>
         </div>
       </div>
     </section>
@@ -51,24 +52,169 @@
           <div class="movies__content">
             <div class="movies__top">
               <h2 class="movies__heading">Search results for:</h2>
+              <h2 class="movies__heading-result">""</h2>
             </div>
             <div class="movies__list" id="movies-list">
+              <i class="fa-solid fa-spinner movies__list-spinner"></i>
+              <div class="movie">
+                <figure class="movie__img-wrapper">
+                  <img src="assets/Guardians of the Galaxy Vol 2.jpg" alt="" class="movie__img" />
+                  <h3 class="movie__info-title">Guardians of the Galaxy Vol. 2</h3>
+                  <div class="movie__info-list">
+                    <div class="movie__info movie__info1">
+                      <p class="movie__info--text">
+                        <i class="fa-solid fa-clock"></i> 136m
+                      </p>
+                    </div>
+                    <div class="movie__info movie__info2">
+                      <p class="movie__info--text">
+                        <i class="fa-solid fa-star"></i> 4.5
+                      </p>
+                    </div>
+                    <div class="movie__info movie__info3">
+                      <p class="movie__info--text">
+                        <i class="fa-solid fa-earth-americas"></i> English
+                      </p>
+                    </div>
+                  </div>
+                </figure>
+              </div>
+              <div class="movie">
+                <figure class="movie__img-wrapper">
+                  <img src="assets/Venom.jpg" alt="" class="movie__img" />
+                  <h3 class="movie__info-title">Venom</h3>
+                  <div class="movie__info-list">
+                    <div class="movie__info movie__info1">
+                      <p class="movie__info--text">
+                        <i class="fa-solid fa-clock"></i> 136m
+                      </p>
+                    </div>
+                    <div class="movie__info movie__info2">
+                      <p class="movie__info--text">
+                        <i class="fa-solid fa-star"></i> 4.5
+                      </p>
+                    </div>
+                    <div class="movie__info movie__info3">
+                      <p class="movie__info--text">
+                        <i class="fa-solid fa-earth-americas"></i> English
+                      </p>
+                    </div>
+                  </div>
+                </figure>
+              </div>
+              <div class="movie">
+                <figure class="movie__img-wrapper">
+                  <img src="assets/Mission Impossible.jpg" alt="" class="movie__img" />
+                  <h3 class="movie__info-title">Mission Impossible</h3>
+                  <div class="movie__info-list">
+                    <div class="movie__info movie__info1">
+                      <p class="movie__info--text">
+                        <i class="fa-solid fa-clock"></i> 136m
+                      </p>
+                    </div>
+                    <div class="movie__info movie__info2">
+                      <p class="movie__info--text">
+                        <i class="fa-solid fa-star"></i> 4.5
+                      </p>
+                    </div>
+                    <div class="movie__info movie__info3">
+                      <p class="movie__info--text">
+                        <i class="fa-solid fa-earth-americas"></i> English
+                      </p>
+                    </div>
+                  </div>
+                </figure>
+              </div>
+              <div class="movie">
+                <figure class="movie__img-wrapper">
+                  <img src="assets/Spider-Man.jpg" alt="" class="movie__img" />
+                  <h3 class="movie__info-title">Spider-Man</h3>
+                  <div class="movie__info-list">
+                    <div class="movie__info movie__info1">
+                      <p class="movie__info--text">
+                        <i class="fa-solid fa-clock"></i> 136m
+                      </p>
+                    </div>
+                    <div class="movie__info movie__info2">
+                      <p class="movie__info--text">
+                        <i class="fa-solid fa-star"></i> 4.5
+                      </p>
+                    </div>
+                    <div class="movie__info movie__info3">
+                      <p class="movie__info--text">
+                        <i class="fa-solid fa-earth-americas"></i> English
+                      </p>
+                    </div>
+                  </div>
+                </figure>
+              </div>
+              <div class="movie">
+                <figure class="movie__img-wrapper">
+                  <img src="assets/Taken.jpg" alt="" class="movie__img" />
+                  <h3 class="movie__info-title">Taken</h3>
+                  <div class="movie__info-list">
+                    <div class="movie__info movie__info1">
+                      <p class="movie__info--text">
+                        <i class="fa-solid fa-clock"></i> 136m
+                      </p>
+                    </div>
+                    <div class="movie__info movie__info2">
+                      <p class="movie__info--text">
+                        <i class="fa-solid fa-star"></i> 4.5
+                      </p>
+                    </div>
+                    <div class="movie__info movie__info3">
+                      <p class="movie__info--text">
+                        <i class="fa-solid fa-earth-americas"></i> English
+                      </p>
+                    </div>
+                  </div>
+                </figure>
+              </div>
+              <div class="movie">
+                <figure class="movie__img-wrapper">
+                  <img src="assets/The Fast and the Furious.jpg" alt="" class="movie__img" />
+                  <h3 class="movie__info-title">The Fast and the Furious</h3>
+                  <div class="movie__info-list">
+                    <div class="movie__info movie__info1">
+                      <p class="movie__info--text">
+                        <i class="fa-solid fa-clock"></i> 136m
+                      </p>
+                    </div>
+                    <div class="movie__info movie__info2">
+                      <p class="movie__info--text">
+                        <i class="fa-solid fa-star"></i> 4.5
+                      </p>
+                    </div>
+                    <div class="movie__info movie__info3">
+                      <p class="movie__info--text">
+                        <i class="fa-solid fa-earth-americas"></i> English
+                      </p>
+                    </div>
+                  </div>
+                </figure>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
     <!-- Footer -->
-     <section class="footer">
+    <section class="footer">
       <a href="#" class="footer__img__wrapper">
         <img src="assets/Netflix_N.png" alt="" class="footer__img" />
       </a>
       <div class="social">
-      <a href="#" class="footer__social"><i class="fa-brands fa-facebook"></i></a>
-      <a href="#" class="footer__social"><i class="fa-brands fa-square-instagram"></i></a>
-      <a href="#" class="footer__social"><i class="fa-brands fa-square-twitter"></i></a>
-    </div>
-  </section>
+        <a href="#" class="footer__social"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="#" class="footer__social"
+          ><i class="fa-brands fa-square-instagram"></i
+        ></a>
+        <a href="#" class="footer__social"
+          ><i class="fa-brands fa-square-twitter"></i
+        ></a>
+      </div>
+    </section>
   </body>
 </html>
-
