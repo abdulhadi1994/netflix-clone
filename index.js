@@ -1,5 +1,4 @@
-let value = document.querySelector(".home__input");
-
+let value = document.querySelector(".home__input")
 
 value.addEventListener("keyup", (event) => {
   if (event.keyCode == 13) {
@@ -8,24 +7,31 @@ value.addEventListener("keyup", (event) => {
 });
 
 async function searchBarClick() {
-  const searchResults = document.querySelector(".home__input").value;
+  const value = document.querySelector(".home__input").value;
 
-  searchResult(searchResults);
-  await fetchMovies(searchResults);
+  searchResult(value);
+  await fetchMovies(value);
 }
 
-function searchResult() {
-
-}
+  function searchResult(value) {
+    const searchResult = document.querySelector(".movies__heading-result");
+    const searchHeading = document.querySelector(".movies__heading");
+  
+    searchResult.innerHTML = `"${value}"`;
+  
+    searchHeading.style.display = "block";
+    searchResult.style.display = "block";
+  }
 
 async function fetchMovies(value) {
+  const movies = document.querySelector("#movies-list");
+
   const response = await fetch(
     `https://omdbapi.com/?type=movie&apikey=13d20677&s=${value}`
   );
 
   const data = await response.json();
   const slicedArray = await data.Search.slice(0, 6);
-  const movies = document.querySelector("#movies-list");
 
   const moviesHTML = slicedArray
     .map((movie) => {
@@ -54,6 +60,7 @@ async function fetchMovies(value) {
  </div>`;
     })
     .join("");
-
+   
   movies.innerHTML = moviesHTML;
 }
+
