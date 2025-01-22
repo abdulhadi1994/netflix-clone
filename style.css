@@ -397,6 +397,7 @@ header {
 @media (max-width: 480px) {
   header {
     gap: 50px;
+    padding: 20px 20px;
   }
 
   .nav__img {
