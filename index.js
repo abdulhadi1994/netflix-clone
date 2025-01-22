@@ -28,6 +28,7 @@ async function searchBarClick() {
 async function fetchMovies(value) {
   const movies = document.querySelector("#movies-list");
 
+  try{
   const response = await fetch(
     `https://omdbapi.com/?type=movie&apikey=13d20677&s=${value}`
   );
@@ -65,4 +66,29 @@ async function fetchMovies(value) {
    
   movies.innerHTML = moviesHTML;
 }
+
+catch (e) {
+  console.error("Error fetching movies:", e);
+  movies.innerHTML = `<div class="error__">
+        <p class="error-message">Your search for <span class="movie-error">"${value}"</span> did not have any matches.</p>
+        <div class="error-suggestion-wrapper">
+        <p class="error-suggestions">Suggestions:
+          <li>
+            Try different keywords
+          </li>
+          <li>
+            Looking for a film or TV programme?
+          </li>
+          <li>
+            Try using a film, TV programme title, an actor or director
+          </li>
+          <li>
+            Try a genre, such as comedy, romance, sports or drama
+          </li>
+        </div>
+        </p>
+      </div>`
+}
+}
+
 
