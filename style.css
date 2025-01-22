@@ -357,6 +357,9 @@ header {
 }
 /* Small Screens */
 @media (max-width: 640px) {
+  header {
+        padding: 20px 40px;
+  }
   .home__input {
     padding: 20px 50px 20px 20px;
     font-size: 16px;
