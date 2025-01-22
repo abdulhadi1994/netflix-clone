@@ -9,6 +9,10 @@ value.addEventListener("keyup", (event) => {
 async function searchBarClick() {
   const value = document.querySelector(".home__input").value;
 
+  const movies = document.querySelector(".movies__list")
+  const loadingSpinner = `<i class="fa-solid fa-spinner movies__list-spinner" id="spinner"></i>`
+  movies.innerHTML = loadingSpinner
+
   searchResult(value);
   await fetchMovies(value);
 }
@@ -18,9 +22,7 @@ async function searchBarClick() {
     const searchHeading = document.querySelector(".movies__heading");
   
     searchResult.innerHTML = `"${value}"`;
-  
-    searchHeading.style.display = "block";
-    searchResult.style.display = "block";
+    searchResult.style.display = 'block'
   }
 
 async function fetchMovies(value) {

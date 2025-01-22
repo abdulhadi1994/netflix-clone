@@ -257,19 +257,19 @@ header {
 .movies__list-spinner {
   font-size: 40px;
   color: white;
-  display: none !important;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  animation: loading 1000ms infinite;
+  animation: loading-spinner 1000ms infinite;
+  display: none;
 }
 
 @keyframes loading-spinner {
   0% {
-    rotate: 0deg;
+    transform: rotate(0deg);
   }
   100% {
-    rotate: 360deg;
+    transform: rotate(360deg);
   }
 }
 
